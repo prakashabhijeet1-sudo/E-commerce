@@ -24,18 +24,12 @@ const products = [
     image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
 }
 ];
-
 let cartCount = 0;
-
 const container = document.getElementById("product-container");
 const cartCounter = document.getElementById("cart-count");
-
 products.forEach(product => {
-
     const card = document.createElement("div");
-
     card.classList.add("product");
-
     card.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
         <div class="product-info">
@@ -44,10 +38,8 @@ products.forEach(product => {
             <button onclick="addToCart()">Add To Cart</button>
         </div>
     `;
-
     container.appendChild(card);
 });
-
 function addToCart(){
     cartCount++;
     cartCounter.innerText = cartCount;
